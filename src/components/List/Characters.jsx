@@ -3,10 +3,7 @@ import Input from "../input/Input";
 import CardCharacter from "./CardCharacter";
 
 
-const Character = ({ characters }) => {
-
-    console.log(characters);
-
+const Characters = ({ characters }) => {
     return (
         <div className="container">
             <div className="row">
@@ -19,7 +16,6 @@ const Character = ({ characters }) => {
                         {characters?.results?.map(character => (
                             <CardCharacter character={character} key={character.id} />
                         ))}
-
                     </div>
                     <Button text="<<" />
                     <Button text="Prev" />
@@ -32,4 +28,4 @@ const Character = ({ characters }) => {
     );
 }
 
-export default Character;
+export default Characters;
